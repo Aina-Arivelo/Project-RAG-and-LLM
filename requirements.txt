@@ -1,12 +1,30 @@
-streamlit
-python-dotenv
-PyPDF2
-langchain
-langchain-openai
-langchain-community
-langchain-text-splitters
-langchain-huggingface
-faiss-cpu
-transformers
-torch
-sentence-transformers
+# ─── PDF ───────────────────────────────────────────────────────────────────────
+# pypdf remplace PyPDF2 (déprécié) — ton Nexus a jusqu'à 6.13.0
+pypdf>=3.16.0
+
+# ─── Streamlit ─────────────────────────────────────────────────────────────────
+streamlit>=1.35.0
+
+# ─── Variables d'environnement ─────────────────────────────────────────────────
+python-dotenv>=1.0.0
+
+# ─── LangChain ─────────────────────────────────────────────────────────────────
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-text-splitters>=0.3.0
+langchain-openai>=0.2.0
+langchain-community>=0.3.0
+langchain-huggingface>=0.1.0
+
+# ─── Vector Store ──────────────────────────────────────────────────────────────
+faiss-cpu>=1.8.0
+
+# ─── HuggingFace / Transformers ────────────────────────────────────────────────
+transformers>=4.40.0
+sentence-transformers>=3.0.0
+huggingface-hub>=0.24.0
+
+# ─── PyTorch (CPU) ─────────────────────────────────────────────────────────────
+# Si ton Nexus ne contient pas torch, installe-le séparément :
+# pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch>=2.1.0
