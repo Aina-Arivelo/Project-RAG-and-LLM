@@ -49,12 +49,11 @@ def get_vectorStore(text_chunks):
 def get_conversation_chain(vectorStore):
     pipe = pipeline(
         "text-generation",
-        model="TinyLlama/TinyLlama-1.1B-Chat-v1.0",  # ✅ léger ~600MB
+        model="TinyLlama/TinyLlama-1.1B-Chat-v1.0",
         max_new_tokens=512,
         temperature=0.5,
         do_sample=True,
-        return_full_text=False   # ✅ retourne seulement la réponse, pas le prompt
-    )
+        return_full_text=False
     llm = HuggingFacePipeline(pipeline=pipe)
     memory = ConversationBufferMemory(
         memory_key='chat_history',
